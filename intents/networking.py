@@ -5,10 +5,10 @@ def compute_effective_bandwidth(intent):
 
     Examples:
 
-    >>> compute_effective_bandwidth("What is the effective bandwidth of a 6 TB hard drive shipped in 3 days?")
+    >>> compute_effective_bandwidth("What is the effective bandwidth of a 6 TB hard drive shipped in 3 days")
     'The effective bandwidth is 0.185 Gb/s'
 
-    >>> compute_effective_bandwidth("Calculate the effective bandwidth of 1 PB of tapes transported in 1 week?")
+    >>> compute_effective_bandwidth("Calculate the effective bandwidth of 1 PB of tapes transported in 1 week")
     'The effective bandwidth is 13.228 Gb/s'
 
     >>> compute_effective_bandwidth("What is the effective bandwidth of a 700MB CD delivered in 1 minute?")
