@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+
+import sys
+from intents.handler import handle_intent
+
+print('\n' + handle_intent(' '.join(sys.argv[1:])))
