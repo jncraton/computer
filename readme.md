@@ -5,7 +5,7 @@ Computer
 
 This package implements the basic structure for a natural language intent parser. It is currently missing the implementation for an intent to calculate the effective bandwidth of a piece of storage media transported from one location to another.
 
-This software expects a Unix-like environment with Python 3 and make available, but other environment should work as well.
+This software expects a Unix-like environment with Python 3 and make available, but other environments should work as well.
 
 Tests for this program can be executed as:
 
