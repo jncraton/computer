@@ -1,4 +1,5 @@
 import re
+import math
 
 def compute_effective_bandwidth(intent):
     """ Computes the effective bandwidth of a storage device being transported
@@ -37,22 +38,28 @@ def compute_max_digital_bandwidth(intent):
     Examples:
 
     >>> compute_max_digital_bandwidth("What is the maximum digital bandwidth of an analog channel with a bandwidth of 20MHz that uses 2 discrete signal levels?")
-    '40.000 Mb/s'
+    'The max channel bandwidth is 40.0 Mb/s'
 
-    >>> compute_max_digital_bandwidth("What is the max digital bandwidth of a channel with an analog bandwidth of 3KHz that uses 8 discrete signal levels?")
-    '9000.000 Kb/s'
+    >>> compute_max_digital_bandwidth("What is the max digital bandwidth of a channel with an analog bandwidth of 3 KHz that uses 8 discrete signal levels?")
+    'The max channel bandwidth is 18.0 Kb/s'
 
     >>> compute_max_digital_bandwidth("What is the highest digital bandwidth of an analog channel with a bandwidth of 12MHz and a 30dB signal to noise ratio?")
-    '3.867 Mb/s'
+    'The max channel bandwidth is 119.607 Mb/s'
 
-    >>> compute_effective_bandwidth("How are you feeling today?")
+    >>> compute_max_digital_bandwidth("What is the highest digital bandwidth of an analog channel with a bandwidth of 1.5 MHz and a 20dB signal to noise ratio?")
+    'The max channel bandwidth is 9.987 Mb/s'
+
+    >>> compute_max_digital_bandwidth("What is the highest digital bandwidth of an analog channel with a bandwidth of 2.2 GHz and a signal to noise ratio of 1000?")
+    'The max channel bandwidth is 21.928 Gb/s'
+
+    >>> compute_max_digital_bandwidth("How are you feeling today?")
     Traceback (most recent call last):
     ...
     ValueError: Unable to parse "How are you feeling today?" as a max digital bandwidth intent
     """
 
     pass
-
+    
 intents = {
     "effective bandwidth": compute_effective_bandwidth,
     "(max|maximum|greatest|largest|highest) digital bandwidth": compute_max_digital_bandwidth,

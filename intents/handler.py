@@ -3,7 +3,7 @@ import re
 
 from intents import arithmetic, networking
 
-intents = {**intents.arithmetic, **intents.networking}
+intents = {**arithmetic.intents, **networking.intents}
 
 def get_intent_handler(intent):
     """ Pareses an intent and calls the appropriate intent processor 
