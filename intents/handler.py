@@ -1,13 +1,9 @@
 import sys
 import re
 
-from intents.arithmetic import compute_addition_result
-from intents.networking import compute_effective_bandwidth
+from intents import arithmetic, networking
 
-intents = {
-    "\d+ *(\+|plus) *\d+": compute_addition_result,
-    "effective bandwidth": compute_effective_bandwidth,
-}
+intents = {**intents.arithmetic, **intents.networking}
 
 def get_intent_handler(intent):
     """ Pareses an intent and calls the appropriate intent processor 

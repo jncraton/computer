@@ -20,3 +20,7 @@ def compute_addition_result(intent):
     result = operand1 + operand2
 
     return f'{operand1} + {operand2} = {result}'
+
+intents = {
+    "\d+ *(\+|plus) *\d+": compute_addition_result,
+}

@@ -24,3 +24,7 @@ def compute_effective_bandwidth(intent):
     """
 
     pass
+
+intents = {
+    "effective bandwidth": compute_effective_bandwidth,
+}
